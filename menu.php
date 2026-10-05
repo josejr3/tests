@@ -1,3 +1,6 @@
+//agregar un foter y un header en todas las webs
+//agregar un secion para subir un pd que justiqieque que tu cuenta es tulla para retirar  saldo y que verifique que si es un pdf
+
 <?php
 
 session_start();
@@ -25,6 +28,15 @@ function mostrarHistorial(int $saldo, array $tiradas): void
     }
 
 }
+
+
+// Lee el dato que viene de JavaScript
+
+
+// Devuelve una respuesta combinando el dato
+echo "El servidor recibió: " . $_GET["opcion"];
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +45,10 @@ function mostrarHistorial(int $saldo, array $tiradas): void
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+<script>
+
+
+</script>
 <body>
     <?php
         if (isset($_SESSION["mostrar"])&& $_SESSION["mostrar"]===true) {
@@ -44,12 +60,14 @@ function mostrarHistorial(int $saldo, array $tiradas): void
     <form action="rule.php" method="post">
         <?php  echo"Saldo actual:". $_SESSION["saldo"]."</br>"; ?>
         Escoje un numeo de opcion
-        <p>1.Apostar numero</br>
+        <button >Enviar</button>
+
+        <button onclick="fetch('procesar.php?opcion=1')">1.Apostar numero</button></br>
            2.Apostar color</br>
            3.Girar ruleta</br>
            4.Apostar docena</br>
         </p>
-        <label><input type="text" name="opcion"></label> 
+        <label><input type="text" id="opcion" name="opcion"></label> 
         <button type="submit">enviar</button>
     </form>
 </body>

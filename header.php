@@ -26,6 +26,7 @@ function mostrarHistorial(int $saldoActual, array $tiradas): void
     }
 
 }
+mostrarHistorial($_SESSION["saldoEnjuego"] - $_SESSION["saldo"], $_SESSION["tiradas"]);
 
 
 ?>

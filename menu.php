@@ -11,13 +11,6 @@ require "header.php";
 </head>
 
 <body>
-    <?php
-    if (isset($_SESSION["mostrar"]) && $_SESSION["mostrar"] === true) {
-        $_SESSION["mostrar"] = false;
-        mostrarHistorial($_SESSION["saldoEnjuego"] - $_SESSION["saldo"], $_SESSION["tiradas"]);
-
-    }
-    ?>
 
     <form action="rule.php" method="post">
         <p>Saldo actual: <?php echo $_SESSION["saldo"]; ?></p>

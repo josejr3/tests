@@ -12,14 +12,13 @@ session_start();
 <body>
 
 <form action="rule.php" method="post">
-         Cual docena</br>
-         1. (1-12)</br>
-         2. (13-24)</br>
-         3. (25-36)</br>
-        <label><input type="text" name="docena"></label> 
-        <button type="submit">enviar</button>
+        Cual docena</br>
+          <button type="submit" name="docena" value="1"> 1 - 12 </button>
+          <button type="submit" name="docena" value="2"> 13 - 24</button>
+          <button type="submit" name="docena" value="3"> 25 - 36 </button>
+       </br>
+
 </form>
-    
     
 </body>
 </html>

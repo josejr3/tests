@@ -245,29 +245,6 @@ function apostarNumero(int &$saldo, &$cantidadesApostadas, &$elecciones,&$saldoE
 }
 
 
-function mostrarHistorial(int $saldo, array $tiradas): void
-
-{
-
-   echo "Saldo actual: " . $saldo . "\n";
-
-   echo "Historial de transacciones hasta el momento:\n";
-
-   foreach ($tiradas as $key => $tirada) {
-
-       echo "Tirada: " . ($key + 1) . "\n";
-
-       echo "Saldo: " . $tirada[0] . "\n";
-
-       echo "Apostado: " . (count($tirada[2]) > 0 ? implode(", ", $tirada[2]) : "Ninguna") . "\n";
-
-       echo "Resultado: " . (count($tirada[1]) > 0 ? implode(", ", $tirada[1]) : "Sin apuestas") . "\n";
-
-       echo "---------------------------------\n";
-
-   }
-
-}
 
 
 while ($saldo > 0) {
@@ -303,7 +280,7 @@ while ($saldo > 0) {
 
            $saldoEnjuego=0;
 
-           mostrarHistorial($saldo, $tiradas);
+           mostrarHistorial($saldoEnjuego-$saldo, $tiradas);
 
            break;
               

@@ -12,9 +12,9 @@ session_start();
 <body>
 
 <form action="rule.php" method="post">
-          A que color vas a apostar (rojo o negro): 
-        <label><input type="text" name="eleccion"></label> 
-        <button type="submit">enviar</button>
+          A que color vas a apostar
+        <button type="submit" name="eleccion" value="negro">Negro</button>
+        <button type="submit" name="eleccion" value="rojo">rojo</button>
 </form>
     
     
